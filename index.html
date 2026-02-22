@@ -17,13 +17,23 @@
             min-height: 100vh;
         }
 
-        /* الصورة نص بيضاوي عمودي على اليمين */
-        .side-image {
-            width: 300px;        /* أكبر عرض */
-            height: 100vh;       /* طول كامل الصفحة */
-            background: url('photo_for_portofolio.jpg') center/cover no-repeat;
-            border-radius: 0 50% 50% 0; /* بيضاوي كامل على الجانب */
+        /* الفريم المستوي على اليمين */
+        .frame {
+            width: 320px;            /* عرض الفريم */
+            height: 100vh;           /* طول كامل الصفحة */
+            background-color: #d6c4b6; /* لون الفريم */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             flex-shrink: 0;
+        }
+
+        /* الصورة البيضاوية داخل الفريم */
+        .side-image {
+            width: 280px;    /* عرض الصورة داخل الفريم */
+            height: 420px;   /* ارتفاع الصورة */
+            background: url('photo_for_portofolio.jpg') center/cover no-repeat;
+            border-radius: 50% / 25%; /* بيضاوي داخل الفريم */
         }
 
         /* محتوى البورتفوليو */
@@ -42,7 +52,7 @@
         }
 
         h2 {
-            border-bottom: 2px solid #d6c4b6;
+            border-bottom: 2px solid #bfa78c;
             padding-bottom: 5px;
             margin-top: 40px;
         }
@@ -73,15 +83,20 @@
             margin: 5px 0;
         }
 
-        /* Responsive for small screens */
+        /* Responsive للموبايل */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-            .side-image {
+            .frame {
                 width: 100%;
                 height: 350px;
-                border-radius: 0 0 50% 50%; /* بيضاوي أفقي */
+                border-radius: 0 0 50% 50%; /* نص بيضاوي أفقي */
+            }
+            .side-image {
+                width: 260px;
+                height: 320px;
+                border-radius: 50% / 25%;
             }
             .content {
                 padding: 20px;
@@ -119,14 +134,14 @@
             <h2>Projects</h2>
             <ul>
                 <li>
-                    <span class="project-title">ML Heart Disease Project:</span> 
+                    <span class="project-title">ML Heart Disease Project:</span>
                     <div class="project-description">
                         Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
                         <a href="https://github.com/hagerZakaria141/ML_Heart_disease_project.git" target="_blank">GitHub Repo</a>
                     </div>
                 </li>
                 <li>
-                    <span class="project-title">Breast Cancer Prediction using SVM:</span>
+                    <span class="project-title">Breast Cancer Prediction using SVM:</span> 
                     <div class="project-description">
                         Predicts whether a tumor is benign or malignant using SVM. Complete workflow for a ML project. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
                         <a href="https://github.com/hagerZakaria141/BreastCancer_SVM.git" target="_blank">GitHub Repo</a>
@@ -149,8 +164,10 @@
             </div>
         </div>
 
-        <!-- الصورة على اليمين -->
-        <div class="side-image"></div>
+        <!-- الفريم + الصورة البيضاوية على اليمين -->
+        <div class="frame">
+            <div class="side-image"></div>
+        </div>
     </div>
 
 </body>
