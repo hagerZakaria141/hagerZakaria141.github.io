@@ -10,8 +10,8 @@
             margin: auto;
             padding: 20px;
             line-height: 1.6;
-            background-color: #e0d6c3; /* بيج أغمق */
-            color: #4b3f36; /* بني غامق للنص */
+            background-color: #e0d6c3; /* بيج هادي */
+            color: #4b3f36; /* بني غامق */
         }
 
         h1, h2 {
@@ -57,10 +57,11 @@
         }
 
         .about-container img {
-            width: 200px;
-            border-radius: 50% 0 0 50%; /* نص دائرة */
+            width: 220px;
+            height: 220px;
             border: 3px solid #d6c4b6;
             object-fit: cover;
+            border-radius: 50% 0 0 50%; /* نص بيضاوي على الجانب */
         }
 
         .about-container .about-text {
@@ -83,6 +84,17 @@
         .contact p {
             text-align: center;
             margin: 5px 0;
+        }
+
+        /* Responsive for small screens */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .about-container img {
+                border-radius: 50%; /* دائري على الموبايل */
+            }
         }
     </style>
 </head>
@@ -121,13 +133,13 @@
             <div class="project-description">
                 Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
                 <a href="https://github.com/hagerZakaria141/ML_Heart_disease_project.git" target="_blank">GitHub Repo</a>
-            </div>
+                </div>
         </li>
         <li>
             <span class="project-title">Breast Cancer Prediction using SVM:</span> 
             <div class="project-description">
-                Predicts whether a tumor is benign or malignant using SVM. Complete workflow for a ML project. <strong>Tools:</strong> Python, Scikit-Learn, Pandas.
-                        <a href="https://github.com/hagerZakaria141/BreastCancer_SVM.git" target="_blank">GitHub Repo</a>
+                Predicts whether a tumor is benign or malignant using SVM. Complete workflow for a ML project. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
+                <a href="https://github.com/hagerZakaria141/BreastCancer_SVM.git" target="_blank">GitHub Repo</a>
             </div>
         </li>
         <li>
