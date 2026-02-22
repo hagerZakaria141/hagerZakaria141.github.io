@@ -1,32 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hager Zakaria Portfolio</title>
+    <meta charset="UTF-8">
+    <title>Hager Zakaria Abdelsabor Ghonim - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f1ed; /* بيج هادي */
+            color: #4b3f36; /* بني غامق للنص */
+        }
+
+        img.profile {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #d6c4b6;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #6b4e42;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #d6c4b6;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .project-title {
+            font-weight: bold;
+        }
+
+        a {
+            color: #836953;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .contact p {
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #d6c4b6;
+            margin: 30px 0;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Hager Zakaria</h1>
-    <p>Machine Learning Student | Computer Science</p>
-
-    <h2>About Me</h2>
-    <p>
-        I am a Computer Science student focusing on Machine Learning and Software Engineering.
+    <!-- Header -->
+    <h1>Hager Zakaria Abdelsabor Ghonim</h1>
+    <img src="photo_for_portofolio.jpg" alt="Hager Zakaria" class="profile">
+    <p style="text-align:center; font-style: italic;">
+        Machine Learning & Software Engineering Student | Passionate about building data-driven solutions and AI projects
     </p>
 
+    <hr>
+
+    <!-- Skills Section -->
     <h2>Skills</h2>
     <ul>
-        <li>Python</li>
-        <li>Pandas & NumPy</li>
-        <li>Scikit-Learn</li>
-        <li>Data Visualization</li>
-        <li>Flask</li>
+        <li>Python, Pandas, NumPy</li>
+        <li>Scikit-Learn, Data Visualization</li>
+        <li>Flask, Deployment, Machine Learning Models</li>
     </ul>
 
+    <!-- Projects Section -->
     <h2>Projects</h2>
     <ul>
-        <li>Car Price Prediction</li>
-        <li>Customer Segmentation</li>
+        <li><span class="project-title">Car Price Prediction:</span> Regression model predicting car prices using feature engineering and multiple algorithms</li>
+        <li><span class="project-title">Customer Segmentation:</span> Applied KMeans clustering with PCA visualization for analyzing customer groups</li>
+        <li><span class="project-title">Your Third Project:</span> Describe briefly what it does and your main contribution</li>
     </ul>
+
+    <!-- Contact Section -->
+    <h2>Contact</h2>
+    <div class="contact">
+        <p><a href="https://www.linkedin.com/in/hager-zakaria141/" target="_blank">LinkedIn</a></p>
+        <p><a href="mailto:zakariahagar47@gmail.com">Email: zakariahagar47@gmail.com</a></p>
+    </div>
 
 </body>
 </html>
