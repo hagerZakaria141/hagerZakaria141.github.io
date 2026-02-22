@@ -57,11 +57,11 @@
         }
 
         .about-container img {
-            width: 260px;
-            height: 260px;
+            width: 300px;  /* أعرض */
+            height: 400px; /* أطول */
             border: 3px solid #d6c4b6;
             object-fit: cover;
-            border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; /* نص بيضاوي كامل */
+            border-radius: 50% / 20%; /* بيضاوي طويل */
         }
 
         .about-container .about-text {
@@ -94,6 +94,8 @@
             }
             .about-container img {
                 border-radius: 50%; /* دائري على الموبايل */
+                width: 250px;
+                height: 330px;
             }
         }
     </style>
@@ -131,9 +133,9 @@
         <li>
             <span class="project-title">ML Heart Disease Project:</span> 
             <div class="project-description">
-                Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
+                Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas.
                 <a href="https://github.com/hagerZakaria141/ML_Heart_disease_project.git" target="_blank">GitHub Repo</a>
-                </div>
+            </div>
         </li>
         <li>
             <span class="project-title">Breast Cancer Prediction using SVM:</span> 
