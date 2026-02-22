@@ -6,23 +6,45 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #e0d6c3; /* بيج هادي */
-            color: #4b3f36; /* بني غامق */
+            margin: 0;
+            padding: 0;
+            background-color: #e0d6c3;
+            color: #4b3f36;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* الصورة نص بيضاوي عمودي على الشمال */
+        .side-image {
+            width: 250px;
+            height: 100vh;
+            background: url('photo_for_portofolio.jpg') center/cover no-repeat;
+            border-radius: 50% 0 0 50%;
+            flex-shrink: 0;
+        }
+
+        /* محتوى البورتفوليو */
+        .content {
+            flex: 1;
+            padding: 40px 50px;
         }
 
         h1, h2 {
-            text-align: center;
             color: #6b4e42;
         }
 
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
         h2 {
-            margin-top: 40px;
             border-bottom: 2px solid #d6c4b6;
             padding-bottom: 5px;
+            margin-top: 40px;
         }
 
         ul {
@@ -39,39 +61,6 @@
             text-decoration: underline;
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #d6c4b6;
-            margin: 30px 0;
-        }
-
-        /* About Me Flex Layout */
-        .about-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .about-container img {
-            width: 300px;  /* أعرض */
-            height: 400px; /* أطول */
-            border: 3px solid #d6c4b6;
-            object-fit: cover;
-            border-radius: 50% / 20%; /* بيضاوي طويل */
-        }
-
-        .about-container .about-text {
-            flex: 1;
-            font-style: italic;
-            font-size: 16px;
-            color: #4b3f36;
-        }
-
-        /* Skills & Projects */
         .project-title {
             font-weight: bold;
         }
@@ -80,84 +69,88 @@
             margin: 5px 0 15px 0;
         }
 
-        /* Contact */
         .contact p {
-            text-align: center;
             margin: 5px 0;
         }
 
         /* Responsive for small screens */
         @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column-reverse;
-                text-align: center;
+            .container {
+                flex-direction: column;
             }
-            .about-container img {
-                border-radius: 50%; /* دائري على الموبايل */
-                width: 250px;
-                height: 330px;
+            .side-image {
+                width: 100%;
+                height: 300px;
+                border-radius: 0 0 50% 50%; /* بيضاوي أفقي */
+            }
+            .content {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <h1>Hager Zakaria Abdelsabor Ghonim</h1>
+    <div class="container">
+        <!-- الصورة على الشمال -->
+        <div class="side-image"></div>
 
-    <!-- About Me Section -->
-    <div class="about-container">
-        <div class="about-text">
-            I am Hager Zakaria Abdelsabor Ghonim, a Machine Learning Engineer passionate about AI and building data-driven solutions.  
-            I hold a Bachelor’s degree in Computer Science from Menoufia University, Faculty of Computers and Information.  
-            I enjoy working on projects that solve real-world problems and continuously learning new techniques in machine learning and AI.
+        <!-- المحتوى -->
+        <div class="content">
+            <!-- Header -->
+            <h1>Hager Zakaria Abdelsabor Ghonim</h1>
+
+            <!-- About Me -->
+            <h2>About Me</h2>
+            <p>
+                I am Hager Zakaria Abdelsabor Ghonim, a Machine Learning Engineer passionate about AI and building data-driven solutions.  
+                I hold a Bachelor’s degree in Computer Science from Menoufia University, Faculty of Computers and Information.  
+                I enjoy working on projects that solve real-world problems and continuously learning new techniques in machine learning and AI.
+            </p>
+
+            <!-- Skills -->
+            <h2>Skills</h2>
+            <ul>
+                <li>Python, Pandas, NumPy</li>
+                <li>Scikit-Learn, Matplotlib, Seaborn, Plotly</li>
+                <li>Flask, Deployment, Git, SQL</li>
+                <li>Machine Learning Techniques: Regression, Classification, Clustering, PCA, Feature Engineering</li>
+                <li>Other Tools: Jupyter Notebook, VS Code, Google Colab</li>
+            </ul>
+
+            <!-- Projects -->
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <span class="project-title">ML Heart Disease Project:</span> 
+                    <div class="project-description">
+                        Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
+                        <a href="https://github.com/hagerZakaria141/ML_Heart_disease_project.git" target="_blank">GitHub Repo</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="project-title">Breast Cancer Prediction using SVM:</span>
+                    <div class="project-description">
+                        Predicts whether a tumor is benign or malignant using SVM. Complete workflow for a ML project. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
+                        <a href="https://github.com/hagerZakaria141/BreastCancer_SVM.git" target="_blank">GitHub Repo</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="project-title">Gold Price Prediction using Random Forest:</span> 
+                    <div class="project-description">
+                        Regression model predicting gold prices. <strong>Tools:</strong> Python, Scikit-Learn, Pandas, Random Forest. 
+                        <a href="https://github.com/hagerZakaria141/gold_price_prediction.git" target="_blank">GitHub Repo</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Contact -->
+            <h2>Contact</h2>
+            <div class="contact">
+                <p><a href="https://www.linkedin.com/in/hager-zakaria141/" target="_blank">LinkedIn</a></p>
+                <p><a href="mailto:zakariahagar47@gmail.com">Email: zakariahagar47@gmail.com</a></p>
+            </div>
         </div>
-        <img src="photo_for_portofolio.jpg" alt="Hager Zakaria">
-    </div>
-
-    <hr>
-
-    <!-- Skills Section -->
-    <h2>Skills</h2>
-    <ul>
-        <li>Python, Pandas, NumPy</li>
-        <li>Scikit-Learn, Matplotlib, Seaborn, Plotly</li>
-        <li>Flask, Deployment, Git, SQL</li>
-        <li>Machine Learning Techniques: Regression, Classification, Clustering, PCA, Feature Engineering</li>
-        <li>Other Tools: Jupyter Notebook, VS Code, Google Colab</li>
-    </ul>
-
-    <!-- Projects Section -->
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <span class="project-title">ML Heart Disease Project:</span> 
-            <div class="project-description">
-                Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas.
-                <a href="https://github.com/hagerZakaria141/ML_Heart_disease_project.git" target="_blank">GitHub Repo</a>
-            </div>
-        </li>
-        <li>
-            <span class="project-title">Breast Cancer Prediction using SVM:</span> 
-            <div class="project-description">
-                Predicts whether a tumor is benign or malignant using SVM. Complete workflow for a ML project. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
-                <a href="https://github.com/hagerZakaria141/BreastCancer_SVM.git" target="_blank">GitHub Repo</a>
-            </div>
-        </li>
-        <li>
-            <span class="project-title">Gold Price Prediction using Random Forest:</span> 
-            <div class="project-description">
-                Regression model predicting gold prices. <strong>Tools:</strong> Python, Scikit-Learn, Pandas, Random Forest. 
-                <a href="https://github.com/hagerZakaria141/gold_price_prediction.git" target="_blank">GitHub Repo</a>
-            </div>
-        </li>
-    </ul>
-
-    <!-- Contact Section -->
-    <h2>Contact</h2>
-    <div class="contact">
-        <p><a href="https://www.linkedin.com/in/hager-zakaria141/" target="_blank">LinkedIn</a></p>
-        <p><a href="mailto:zakariahagar47@gmail.com">Email: zakariahagar47@gmail.com</a></p>
     </div>
 
 </body>
