@@ -15,31 +15,23 @@
         .container {
             display: flex;
             min-height: 100vh;
+            align-items: center; /* يثبت النص مع الصورة */
         }
 
-        /* الفريم المستوي على اليمين */
-        .frame {
-            width: 320px;            /* عرض الفريم */
-            height: 100vh;           /* طول كامل الصفحة */
-            background-color: #d6c4b6; /* لون الفريم */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        /* الصورة البيضاوية داخل الفريم */
+        /* الصورة الدائرية أو بيضاوية على الجانب */
         .side-image {
-            width: 280px;    /* عرض الصورة داخل الفريم */
-            height: 420px;   /* ارتفاع الصورة */
+            width: 300px;       /* عرض مناسب */
+            height: 300px;      /* ارتفاع مناسب */
             background: url('photo_for_portofolio.jpg') center/cover no-repeat;
-            border-radius: 50% / 25%; /* بيضاوي داخل الفريم */
+            border-radius: 50%; /* دائرة كاملة */
+            margin: 0 40px;     /* مسافة بين الصورة والنص */
+            flex-shrink: 0;
         }
 
         /* محتوى البورتفوليو */
         .content {
             flex: 1;
-            padding: 40px 50px;
+            padding: 20px 40px;
         }
 
         h1, h2 {
@@ -87,19 +79,15 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-            }
-            .frame {
-                width: 100%;
-                height: 350px;
-                border-radius: 0 0 50% 50%; /* نص بيضاوي أفقي */
+                align-items: center;
             }
             .side-image {
-                width: 260px;
-                height: 320px;
-                border-radius: 50% / 25%;
+                width: 250px;
+                height: 250px;
+                margin: 0 0 20px 0;
             }
             .content {
-                padding: 20px;
+                padding: 0 20px;
             }
         }
     </style>
@@ -107,9 +95,8 @@
 <body>
 
     <div class="container">
-        <!-- المحتوى على اليسار -->
+        <!-- النص على اليسار -->
         <div class="content">
-            <!-- Header -->
             <h1>Hager Zakaria Abdelsabor Ghonim</h1>
 
             <!-- About Me -->
@@ -134,12 +121,12 @@
             <h2>Projects</h2>
             <ul>
                 <li>
-                    <span class="project-title">ML Heart Disease Project:</span>
+                    <span class="project-title">ML Heart Disease Project:</span> 
                     <div class="project-description">
                         Classification task predicting likelihood of heart disease using Logistic Regression. <strong>Tools:</strong> Python, Scikit-Learn, Pandas. 
                         <a href="https://github.com/hagerZakaria141/ML_Heart_disease_project.git" target="_blank">GitHub Repo</a>
                     </div>
-                </li>
+                    </li>
                 <li>
                     <span class="project-title">Breast Cancer Prediction using SVM:</span> 
                     <div class="project-description">
@@ -164,10 +151,8 @@
             </div>
         </div>
 
-        <!-- الفريم + الصورة البيضاوية على اليمين -->
-        <div class="frame">
-            <div class="side-image"></div>
-        </div>
+        <!-- الصورة الدائرية على اليمين -->
+        <div class="side-image"></div>
     </div>
 
 </body>
